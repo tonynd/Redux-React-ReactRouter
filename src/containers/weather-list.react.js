@@ -10,19 +10,19 @@ class WeatherList extends Component {
   
   _renderWeather = (cityData) => {
     let temps = cityData.list.map(weather => weather.main.temp);
-    let pressure = cityData.list.map(weather => weather.main.pressure);
-    let humidity = cityData.list.map(weather => weather.main.humidity);
+    let pressures = cityData.list.map(weather => weather.main.pressure);
+    let humidities = cityData.list.map(weather => weather.main.humidity);
     return (
       <tr key={cityData.city.id}>
         <td>{cityData.city.name}</td>
         <td>
-          <Chart data={temps} color="orange" />
+          <Chart data={temps} color="orange" units="K" />
         </td>
         <td>
-          <Chart data={pressure} color="red" />
+          <Chart data={pressures} color="red" units="hPa" />
         </td>
         <td>
-          <Chart data={humidity} color="blue" />
+          <Chart data={humidities} color="blue" units="%" />
         </td>
       </tr>
     );
@@ -34,9 +34,9 @@ class WeatherList extends Component {
         <thead>
           <tr>
             <th>City</th>
-            <th>Temperature</th>
-            <th>Pressure</th>
-            <th>Humidity</th>
+            <th>Temperature (K)</th>
+            <th>Pressure (hPa)</th>
+            <th>Humidity (%)</th>
           </tr>
         </thead>
         <tbody>
