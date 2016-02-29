@@ -1,0 +1,4 @@
+module.exports = {
+  "API_KEY": "a514a3223ea10258b0a9041a350479a0",
+  "ROOT_URL": "http://api.openweathermap.org/data/2.5/forecast?appid="
+}
