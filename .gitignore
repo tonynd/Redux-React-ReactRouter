@@ -1,4 +1,4 @@
 /node_modules
-/public/bundle.js
-/public/bower_components
+bundle.js
 .DS_Store
+npm-debug.log

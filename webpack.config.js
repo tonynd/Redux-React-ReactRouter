@@ -1,34 +1,23 @@
-'use strict';
-
-const path = require('path');
-const webpack = require('webpack');
-
-const nodeModulesPath = path.join(__dirname, 'node_modules');
-
 module.exports = {
   entry: [
     './src/index.js'
   ],
   output: {
-    path: path.join(__dirname, 'public'),
-    filename: 'bundle.js',
-    publicPath: '/'
-  },
-  plugins: [
-    new webpack.NoErrorsPlugin()
-  ],
-  resolve: {
-    root: [nodeModulesPath],
-    extensions: ['', '.js', '.jsx']
-  },
-  resolveLoader: {
-    root: nodeModulesPath
+    path: __dirname,
+    publicPath: '/',
+    filename: 'bundle.js'
   },
   module: {
     loaders: [{
-      test: /\.js?$|\.jsx?$/,
-      loaders: ['babel'],
-      include: path.join(__dirname, 'src')
+      exclude: /node_modules/,
+      loader: 'babel'
     }]
+  },
+  resolve: {
+    extensions: ['', '.js', '.jsx']
+  },
+  devServer: {
+    historyApiFallback: true,
+    contentBase: './'
   }
 };
