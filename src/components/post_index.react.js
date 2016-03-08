@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router';
 import { fetchPosts } from '../actions/post.action';
 
 class PostIndex extends Component {
@@ -14,7 +15,12 @@ class PostIndex extends Component {
 
   render() {
     return(
-      <div>List of Blog posts!</div>
+      <div>
+        <div className="text-xs-right">
+          <Link to="/post/new" className="btn btn-primary">Add a Post</Link>
+        </div>
+        List of Blog posts!
+      </div>
     );
   }
 }
@@ -25,4 +31,4 @@ const mapPropsToState = (state) => {
   };
 };
 
-export default connect(mapPropsToState, {fetchPosts})(PostIndex);
+export default connect(mapPropsToState, { fetchPosts })(PostIndex);
