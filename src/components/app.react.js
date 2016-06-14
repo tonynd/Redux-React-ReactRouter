@@ -1,4 +1,5 @@
 import React, {  Component } from 'react';
+import CommentBox from './comment_box.react';
 
 export default class App extends Component {
 
@@ -8,7 +9,9 @@ export default class App extends Component {
 
   render(){
     return (
-      <div>this is simple react</div>
+      <div>
+        <CommentBox />
+      </div>
     );
   }
 }
