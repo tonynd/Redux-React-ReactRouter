@@ -9,8 +9,9 @@ export default class CommentBox extends Component {
   }
 
   _handleChange = (event) => {
+    const {target: {name, value}} = event;
     let obj = {};
-    obj[event.target.name] = event.target.value;
+    obj[name] = value;
     this.setState(obj);
   };
 

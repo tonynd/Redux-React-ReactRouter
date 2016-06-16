@@ -1,10 +1,8 @@
 import { combineReducers } from 'redux';
+import List from './list.reducer';
 
-function test(){
-  return {book: 1};
-}
 const rootReducer = combineReducers({
-  list: test
+  comments: List
 });
 
 export default rootReducer;

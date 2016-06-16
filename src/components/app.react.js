@@ -1,5 +1,6 @@
 import React, {  Component } from 'react';
 import CommentBox from './comment_box.react';
+import CommentList from './comment_list.react';
 
 export default class App extends Component {
 
@@ -11,6 +12,7 @@ export default class App extends Component {
     return (
       <div>
         <CommentBox />
+        <CommentList />
       </div>
     );
   }

@@ -12,4 +12,8 @@ describe("Test the App component", () => {
     // expect a html element with the class name of "comment-box" to exist
     expect(component.find(".comment-box")).to.exist;
   });
+
+  it("shows comment list", () => {
+    expect(component.find(".comment-list")).to.exist;
+  });
 });
