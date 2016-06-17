@@ -9,7 +9,7 @@ class CommentList extends Component {
   render() {
     return (
       <div className="comment-list">
-        {this.props.comments.map(comment => <li key={comment}>{comment}</li>)}
+        {this.props.comments.map((comment, i) => <li key={i}>{comment}</li>)}
       </div>
     );
   }
